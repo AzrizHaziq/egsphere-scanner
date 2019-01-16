@@ -26,6 +26,9 @@
     "@zeit/next-sass": "^1.0.1"
   },
   "license": "ISC",
+  "peerDependencies": {
+    "less": "^2.7.3"
+  },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1",
     "next-compose": "0.0.2"
