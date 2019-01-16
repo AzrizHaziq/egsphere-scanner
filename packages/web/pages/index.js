@@ -1,10 +1,12 @@
 import Link from 'next/link'
 
 export default () => (
-  <div>
-    <h1>Hello from the front</h1>
-    <Link href="/ping">
-      <a>Go to api route</a>
+  <div className='text-center'>
+    <Link href='/login'>
+      <a>Login</a>
+    </Link>
+    <Link href='/register'>
+      <a>Register</a>
     </Link>
   </div>
 )

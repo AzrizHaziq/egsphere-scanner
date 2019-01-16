@@ -1,0 +1,19 @@
+$primary: #1890ff;
+
+.auth-layout {
+  &-container {
+    display: grid;
+    grid-template: 1fr 3fr 1fr/ 1fr 3fr 1fr;
+    height: 100vh;
+
+    background: $primary;
+    background: -webkit-linear-gradient(to right, darken($primary, 35), $primary);
+    background: linear-gradient(to right, darken($primary, 35), $primary);
+  }
+
+  &-center {
+    grid-area: 2/2;
+    align-self: center;
+  }
+}
+
