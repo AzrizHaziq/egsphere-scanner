@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/ping', (req, res, next) => {
-  res.json({ ping: 'pong' })
+  res.json({ ping: 'pong azirz' })
 });
 
 module.exports = router;
