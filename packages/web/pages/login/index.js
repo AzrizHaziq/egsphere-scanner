@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'antd'
 import { Row, Col } from 'antd'
 import LoginForm from './login-form'
-import { AuthLayout } from './../../layout/auth/auth'
+import { AuthLayout } from '@Layout/auth/auth'
 
 export default () => (
   <AuthLayout>
