@@ -4,10 +4,11 @@
   "description": "lerna",
   "private": true,
   "scripts": {
-    "dev": "run-p -l 'dev:**'",
-    "dev:web": "lerna run dev --scope web",
-    "dev:api": "lerna run dev --scope api",
-    "start": "run-p -l 'start:**'",
+    "dev": "run-p --print-label 'dev:**' 'proxy'",
+    "start": "run-p --print-label 'start:**' 'proxy'",
+    "proxy": "micro-proxy -r rules-dev.json",
+    "dev:web": "lerna run dev --stream --scope web",
+    "dev:api": "lerna run dev ---stream --scope api",
     "start:web": "lerna run start --scope web",
     "start:api": "lerna run start --scope api"
   },
@@ -15,7 +16,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "lerna": "^3.10.5"
+    "lerna": "^3.10.6"
   },
   "devDependencies": {
     "micro-proxy": "^1.1.0",

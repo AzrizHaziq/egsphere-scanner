@@ -1,8 +1,7 @@
 {
-  "name": "egshere-scanner-api",
+  "name": "api",
   "version": "1.0.0",
   "description": "The Api",
-  "private": true,
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",

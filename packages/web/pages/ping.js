@@ -2,18 +2,18 @@ import { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 
 export default class Index extends Component {
-  static async getInitialProps () {
+  static async getInitialProps() {
     const apiUrl = process.env.API_URL
     console.log(apiUrl)
 
-    const response = await fetch(
-      `${apiUrl}/ping`
-    ).then(response => response.json())
+    const response = await fetch(`${apiUrl}/ping`).then(response =>
+      response.json(),
+    )
 
     return { response }
   }
 
-  render () {
+  render() {
     const { response } = this.props
 
     return (

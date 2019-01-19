@@ -1,22 +1,25 @@
 {
-    "presets": [
-        "next/babel"
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
     ],
-    "plugins": [
-        [
-            "import",
-            {
-                "libraryName": "antd",
-                "style": true
-            }
-        ],
-        [
-            "module-resolver",
-            {
-                "root": [
-                    "./"
-                ]
-            }
-        ]
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@Assets": "./assets",
+          "@Components": "./components",
+          "@Helpers": "./helpers",
+          "@Layout": "./layout",
+          "@Pages": "./pages"
+        }
+      }
     ]
+  ]
 }

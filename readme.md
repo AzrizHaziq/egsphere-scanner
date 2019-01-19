@@ -2,6 +2,8 @@
 
 This is a starter/example repo for creating websites with NextJS and API with Express on a monorepo, with yarn & lerna.
 
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+
 ## How to use
 
 WEB   (NextJS)      will be running on http://localhost:3000
