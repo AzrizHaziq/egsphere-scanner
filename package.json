@@ -7,8 +7,8 @@
     "dev": "run-p --print-label 'dev:**' 'proxy'",
     "start": "run-p --print-label 'start:**' 'proxy'",
     "proxy": "micro-proxy -r rules-dev.json",
-    "dev:web": "lerna run dev --scope web",
-    "dev:api": "lerna run dev --scope api",
+    "dev:web": "lerna run dev --stream --scope web",
+    "dev:api": "lerna run dev ---stream --scope api",
     "start:web": "lerna run start --scope web",
     "start:api": "lerna run start --scope api"
   },
