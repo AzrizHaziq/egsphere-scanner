@@ -1,12 +1,6 @@
-import Link from 'next/link'
+import React from 'react'
+import DashboardLayout from '../layout/dashboard/dashboard'
 
 export default () => (
-  <div className='text-center'>
-    <Link href='/login'>
-      <a>Login</a>
-    </Link>
-    <Link href='/register'>
-      <a>Register</a>
-    </Link>
-  </div>
+  <DashboardLayout />
 )
