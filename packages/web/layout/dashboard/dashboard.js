@@ -1,8 +1,9 @@
 import './dashboard.scss'
-import { Layout, Icon } from 'antd'
-const { Header, Content } = Layout
+import { Layout } from 'antd'
+const { Content } = Layout
 import React, { Component } from 'react'
 import { MenuItems } from '../../components/menu-items/menu'
+import { EGSphereHeader } from '../../components/header/header';
 
 class DashboardLayout extends Component {
   state = {
@@ -16,8 +17,9 @@ class DashboardLayout extends Component {
   }
 
   render() {
-    const { collapsed } = this.state;
     const { children } = this.props
+    const { collapsed } = this.state
+
     return (
       <Layout style={{ height: '100vh' }}>
         <MenuItems
@@ -25,13 +27,7 @@ class DashboardLayout extends Component {
           isCollapse={collapsed}
         />
         <Layout>
-          <Header className='header'>
-            <Icon
-              className='trigger pl-3'
-              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-              onClick={this.toggle}
-            />
-          </Header>
+          <EGSphereHeader />
           <Content className='content'>{children}</Content>
         </Layout>
       </Layout>

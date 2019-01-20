@@ -4,19 +4,17 @@ const { Sider } = Layout
 
 const MenuItems = ({ toggle, isCollapse }) => (
   <Sider trigger={null} collapsible collapsed={isCollapse}>
-    <div className='logo' />
+    <div className="d-flex align-items-center justify-content-center" style={{ height: '60px' }}>
+      <h4 className="text-white mb-0">EgSphere Scanner</h4>
+    </div>
     <Menu theme='dark' mode='inline' defaultSelectedKeys={['1']}>
       <Menu.Item key='1'>
-        <Icon type='user' />
-        <span>nav 1</span>
+        <Icon type='home' />
+        <span>Home</span>
       </Menu.Item>
       <Menu.Item key='2'>
-        <Icon type='video-camera' />
-        <span>nav 2</span>
-      </Menu.Item>
-      <Menu.Item key='3'>
-        <Icon type='upload' />
-        <span>nav 3</span>
+        <Icon type='user' />
+        <span>Profiles</span>
       </Menu.Item>
     </Menu>
   </Sider>
