@@ -19,8 +19,8 @@
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
     "particles.js": "^2.0.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1",
     "react-particles-js": "^2.4.2",
     "test": "^0.6.0",
     "un": "0.0.0"
