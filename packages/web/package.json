@@ -21,16 +21,17 @@
     "particles.js": "^2.0.0",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
-    "react-particles-js": "^2.4.2",
-    "test": "^0.6.0",
-    "un": "0.0.0"
+    "react-particles-js": "^2.4.2"
   },
   "license": "ISC",
   "peerDependencies": {
     "less": "^2.7.3"
   },
   "devDependencies": {
+    "@types/react": "^16.7.20",
+    "@types/react-dom": "^16.0.11",
     "babel-plugin-module-resolver": "^3.1.1",
-    "next-compose": "0.0.2"
+    "next-compose": "0.0.2",
+    "prop-types": "^15.6.2"
   }
 }
