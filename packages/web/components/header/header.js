@@ -1,21 +1,22 @@
 import './header.scss'
-import React, { useContext } from 'react'
+import React from 'react'
 import { Layout, Menu, Icon } from 'antd'
-
 const { Header } = Layout
-import { CollapsibleCtx } from '../../useHook/collapsible-header'
+import { ToggleConsumer } from './../../helpers/toggle.context'
 
 const EGSphereHeader = () => {
-  const { isCollapsible, setCollapsible } = useContext(CollapsibleCtx)
-
   return (
     <Header className='header'>
-      <Icon
-        className='trigger pl-3'
-        type={ isCollapsible ? 'menu-unfold' : 'menu-fold' }
-        onClick={() => setCollapsible(!isCollapsible)}
-      />
-      <Menu mode='horizontal' style={ { lineHeight : '60px' } }>
+      <ToggleConsumer>
+        {({isCollapsed, toggleCollapse }) => (
+          <Icon
+            className='trigger pl-3'
+            type={isCollapsed ? 'menu-unfold' : 'menu-fold'}
+            onClick={toggleCollapse}
+          />
+        )}
+      </ToggleConsumer>
+      <Menu mode='horizontal' style={{ lineHeight: '60px' }}>
         <Menu.Item key='1'>Profile</Menu.Item>
       </Menu>
     </Header>

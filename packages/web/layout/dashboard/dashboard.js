@@ -1,41 +1,23 @@
 import './dashboard.scss'
 import { Layout } from 'antd'
 const { Content } = Layout
-import React, { Component } from 'react'
+import React from 'react'
 import { MenuItems } from '../../components/menu-items/menu'
-import { EGSphereHeader } from '../../components/header/header';
+import { EGSphereHeader } from '../../components/header/header'
+import { Toggler } from './../../helpers/toggle.context'
 
-
-
-
-class DashboardLayout extends Component {
-  state = {
-    collapsed: false,
-  }
-
-  toggle = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    })
-  }
-
-  render() {
-    const { children } = this.props
-    const { collapsed } = this.state
-
-    return (
+const DashboardLayout = ({ children }) => {
+  return (
+    <Toggler>
       <Layout style={{ height: '100vh' }}>
-        <MenuItems
-          toggle={this.toggle}
-          isCollapse={collapsed}
-        />
+        <MenuItems />
         <Layout>
           <EGSphereHeader />
           <Content className='content'>{children}</Content>
         </Layout>
       </Layout>
-    )
-  }
+    </Toggler>
+  )
 }
 
 export default DashboardLayout
