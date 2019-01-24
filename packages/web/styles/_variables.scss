@@ -5,7 +5,7 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-@import "~bootstrap-scss/variables";
+@import "../../../node_modules/bootstrap-scss/variables";
 
 
 //
@@ -28,7 +28,7 @@ $purple:      #64629d;
 
 $theme-colors: ();
 $theme-colors: map-merge((
-        "primary":    $orange,
+        "primary":    $blue,
         "secondary":  $gray,
         "success":    $green,
         "info":       $blue-light,
