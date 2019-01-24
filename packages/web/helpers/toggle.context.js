@@ -1,47 +1,25 @@
-import * as PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React from 'react'
+import { useToggle } from './toggle.hook'
 
-const ToggleContext = React.createContext({
-  isCollapse: false,
-})
+const ToggleContext = React.createContext({})
 
 const ToggleProvider = ToggleContext.Provider
 const ToggleConsumer = ToggleContext.Consumer
 
-class Toggler extends Component {
-  state = {
-    isCollapse: false,
-  }
+function Toggle({ children }) {
+  const { isCollapse, toggle, setCollapsed } = useToggle(false)
 
-  handleCollapse = (isCollapse) => {
-    this.setState({ isCollapse })
-  }
-
-  toggleCollapse = () => {
-    this.setState(({ isCollapse }) => !isCollapse)
-  }
-
-  render() {
-    const { isCollapse } = this.state
-    const { children } = this.props
-
-    return (
-      <ToggleProvider
-        value={{
-          isCollapse,
-          handleCollapse: this.handleCollapse,
-          toggleCollapse: this.toggleCollapse,
-        }}
-      >
-        {children}
-      </ToggleProvider>
-    )
-  }
+  return (
+    <ToggleProvider
+      value={{
+        isCollapse,
+        toggle,
+        setCollapsed,
+      }}
+    >
+      {children}
+    </ToggleProvider>
+  )
 }
 
-Toggler.propTypes = {
-  children: PropTypes.any,
-  initCollapse: PropTypes.bool,
-}
-
-export { Toggler, ToggleContext, ToggleConsumer }
+export { Toggle, ToggleContext, ToggleConsumer }

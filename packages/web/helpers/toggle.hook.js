@@ -1,18 +1,18 @@
 import { useState } from 'react';
 
 function useToggle(bool = false) {
-  const [ isCollapsed, setCollapsedState ] = useState(bool)
+  const [ isCollapse, setCollapseState ] = useState(bool)
 
   function setCollapsed(setCollapsed) {
-    setCollapsedState(setCollapsed)
+    setCollapseState(setCollapsed)
   }
 
   function toggle() {
-    setCollapsedState(!isCollapsed)
+    setCollapseState(!isCollapse)
   }
 
   return {
-    isCollapsed,
+    isCollapse,
     setCollapsed,
     toggle
   }

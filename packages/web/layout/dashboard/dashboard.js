@@ -2,13 +2,13 @@ import './dashboard.scss'
 import { Layout } from 'antd'
 const { Content } = Layout
 import React from 'react'
+import { Toggle } from './../../helpers/toggle.context'
 import { MenuItems } from '../../components/menu-items/menu'
 import { EGSphereHeader } from '../../components/header/header'
-import { Toggler } from './../../helpers/toggle.context'
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Toggler>
+    <Toggle>
       <Layout style={{ height: '100vh' }}>
         <MenuItems />
         <Layout>
@@ -16,7 +16,7 @@ const DashboardLayout = ({ children }) => {
           <Content className='content'>{children}</Content>
         </Layout>
       </Layout>
-    </Toggler>
+    </Toggle>
   )
 }
 
