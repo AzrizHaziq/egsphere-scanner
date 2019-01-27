@@ -11,13 +11,13 @@
     [
       "module-resolver",
       {
-        "root": ["./"],
+        "root": ["./packages/web/"],
         "alias": {
-          "@Assets": "./assets",
-          "@Components": "./components",
-          "@Helpers": "./helpers",
-          "@Layout": "./layout",
-          "@Pages": "./pages"
+          "Assets": "./assets",
+          "Components": "./components",
+          "Helpers": "./helpers",
+          "Layout": "./layout",
+          "Pages": "./pages"
         }
       }
     ]
