@@ -2,7 +2,7 @@ import './header.scss'
 import React, { useContext } from 'react'
 import { Layout, Menu, Icon } from 'antd'
 const { Header } = Layout
-import { ToggleContext } from './../../helpers/toggle.context'
+import { ToggleContext } from 'Helpers/toggle.context'
 
 const EGSphereHeader = () => {
   const { isCollapse, toggle } = useContext(ToggleContext)

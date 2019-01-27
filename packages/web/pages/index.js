@@ -1,6 +1,6 @@
 import React from 'react'
-import DashboardLayout from '../layout/dashboard/dashboard'
-import { Machine } from '../components/machine/machine'
+import DashboardLayout from 'Layout/dashboard/dashboard'
+import { Machine } from 'Components/machine/machine'
 
 export default () => (
   <DashboardLayout>

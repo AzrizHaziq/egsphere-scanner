@@ -1,6 +1,6 @@
 import './auth.scss'
 import React from 'react'
-import Particle from './../../components/particle'
+import Particle from 'Components/particle'
 
 const AuthLayout = props => (
   <>

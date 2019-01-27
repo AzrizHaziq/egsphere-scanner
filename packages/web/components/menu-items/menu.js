@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Layout, Menu, Icon } from 'antd'
-import { ToggleContext } from '../../helpers/toggle.context'
+import { ToggleContext } from 'Helpers/toggle.context'
 
 const { Sider } = Layout
 

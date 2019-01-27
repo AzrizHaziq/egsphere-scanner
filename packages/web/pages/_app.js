@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import './../styles/style.scss'
+import 'Styles/style.scss'
 import App, {Container} from 'next/app'
 
 export default class MyApp extends App {

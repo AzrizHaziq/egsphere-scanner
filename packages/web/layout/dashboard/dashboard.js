@@ -2,9 +2,9 @@ import './dashboard.scss'
 import { Layout } from 'antd'
 const { Content } = Layout
 import React from 'react'
-import { Toggle } from './../../helpers/toggle.context'
-import { MenuItems } from '../../components/menu-items/menu'
-import { EGSphereHeader } from '../../components/header/header'
+import { Toggle } from 'Helpers/toggle.context'
+import { MenuItems } from 'Components/menu-items/menu'
+import { EGSphereHeader } from 'Components/header/header'
 
 const DashboardLayout = ({ children }) => {
   return (
