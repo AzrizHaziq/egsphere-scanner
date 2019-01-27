@@ -17,7 +17,8 @@
           "Components": "./components",
           "Helpers": "./helpers",
           "Layout": "./layout",
-          "Pages": "./pages"
+          "Pages": "./pages",
+          "Styles": "./styles"
         }
       }
     ]
