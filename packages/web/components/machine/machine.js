@@ -5,15 +5,15 @@ function Machine() {
   return (
     <Card
       title={
-        <div>
+        <>
           <Icon
             type='cloud'
             className='pr-1'
             theme='twoTone'
             twoToneColor='#1890ff'
           />
-          <span className='text-primary'>Server Name</span>
-        </div>
+          <span className='text-primary'>Machine Name</span>
+        </>
       }
       extra={<a href='#'>More</a>}
       className='rounded shadow-b-1'
