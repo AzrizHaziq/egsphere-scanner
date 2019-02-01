@@ -8,15 +8,15 @@ import { EGSphereHeader } from 'Components/header/header'
 
 const DashboardLayout = ({ children }) => {
   return (
-    <Toggle>
-      <Layout style={{ height: '100vh' }}>
+    <Layout style={{ height: '100vh' }}>
+      <Toggle>
         <MenuItems />
         <Layout>
           <EGSphereHeader />
           <Content className='content'>{children}</Content>
-        </Layout>
-      </Layout>
-    </Toggle>
+        </Layout>{' '}
+      </Toggle>
+    </Layout>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Card } from 'antd'
 import RegisterForm from './register-form'
-import { AuthLayout } from 'Layout/auth/auth'
+import { AuthLayout } from 'layout/auth/auth-layout'
 
 export default () => (
   <AuthLayout>
