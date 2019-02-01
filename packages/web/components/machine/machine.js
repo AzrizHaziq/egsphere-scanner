@@ -71,7 +71,7 @@ function Machine() {
               actions={[
                 <div>
                   <Icon type='clock-circle' className='d-inline ml-auto pr-1' />
-                  <Tooltip title='last scanned at'>
+                  <Tooltip title='scanned at'>
                     <h6 className='d-inline text-muted-50'>23/02/2019</h6>
                   </Tooltip>
                 </div>,
