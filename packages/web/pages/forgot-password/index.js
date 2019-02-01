@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'antd'
 import { Row, Col } from 'antd'
 import ForgotPassword from './forgot-password-form'
-import { AuthLayout } from 'Layout/auth/auth'
+import { AuthLayout } from 'layout/auth/auth-layout'
 
 export default () => (
   <AuthLayout>

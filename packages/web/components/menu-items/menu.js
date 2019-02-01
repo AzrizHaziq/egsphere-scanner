@@ -13,7 +13,9 @@ const MenuItems = () => {
         className='d-flex align-items-center justify-content-center'
         style={{ height: '60px' }}
       >
-        <h4 className='text-white mb-0'>EgSphere Scanner</h4>
+        <h4 className='text-white mb-0'>
+          EgSphere {isCollapse ? '' : 'Scanner'}
+        </h4>
       </div>
       <Menu theme='dark' mode='inline' defaultSelectedKeys={['1']}>
         <Menu.Item key='1'>

@@ -1,7 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
 import 'Styles/style.scss'
+import Head from 'next/head'
 import App, {Container} from 'next/app'
+import React  from 'react'
 
 export default class MyApp extends App {
   static async getInitialProps ({ Component, router, ctx }) {
