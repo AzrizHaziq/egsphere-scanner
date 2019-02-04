@@ -3,10 +3,17 @@ import { Modal, Button, Icon, Col, Input } from 'antd'
 const InputGroup = Input.Group
 
 const AddNewMachine = ({ isModalOpen, setModal }) => {
-  const [loading, setLoading] = useState(false)
+  const [loadingSubmit, setLoadingSubmit] = useState(false)
+  const [loadingTestConnection, setLoadingTestConnection] = useState(false)
 
   const handleCancel = () => setModal(false)
   const handleOk = e => console.log(e)
+
+  function handleTestConnection(e) {
+    setLoadingTestConnection(true)
+
+    setTimeout(() => setLoadingTestConnection(false), 1000)
+  }
 
   return (
     <Modal
@@ -19,9 +26,18 @@ const AddNewMachine = ({ isModalOpen, setModal }) => {
           Cancel
         </Button>,
         <Button
+          key='test-connection'
+          type='primary'
+          loading={loadingTestConnection}
+          onClick={handleTestConnection}
+          htmlType='button'
+        >
+          Test Connection
+        </Button>,
+        <Button
           key='submit'
           type='primary'
-          loading={loading}
+          loading={loadingSubmit}
           onClick={handleOk}
           htmlType='submit'
         >
