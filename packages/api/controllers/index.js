@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/ping', (req, res, next) => {
-  res.json({ ping: 'pong azirz' })
+  res.json({ ping: 'pong azriz' })
 })
 
 router.get('/test-json', (req, res, next) => {

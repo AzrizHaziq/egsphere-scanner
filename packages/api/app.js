@@ -1,15 +1,11 @@
 // Packages
-const express = require('express')
-const logger = require('morgan')
-const bodyParser = require('body-parser')
 const cors = require('cors')
-
-// Ours
+const logger = require('morgan')
+const express = require('express')
+const bodyParser = require('body-parser')
 const prefix = require('./middlewares/prefix')
 const error404Handler = require('./middlewares/404')
 const errorHandler = require('./middlewares/errors')
-
-const index = require('./controllers/index')
 
 const app = express();
 
@@ -19,7 +15,14 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+// Routes
+const index = require('./controllers/index')
+const machineController = require('./controllers/machines.controllers')
+
+app.use('/machines', machineController)
 app.use('/', index)
+
+
 
 app.get('/robots.txt', function (req, res) {
   res.type('text/plain');
