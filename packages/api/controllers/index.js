@@ -1,3 +1,5 @@
+const machineController = require('./machines.controllers')
+
 const express = require('express')
 const router = express.Router()
 
@@ -9,13 +11,7 @@ router.get('/ping', (req, res, next) => {
   res.json({ ping: 'pong azriz' })
 })
 
-router.get('/test-json', (req, res, next) => {
-  res.json({
-    userId: 1,
-    id: 1,
-    title: 'delectus aut autem',
-    completed: false,
-  })
-})
+router.use('/machines', machineController)
+
 
 module.exports = router
