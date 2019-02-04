@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
-// Pacakges
 require('dotenv').config({ path: '.env' })
 const debug = require('debug')('api:server')
 const http = require('http')
 
-// Ours
 const app = require('./app')
 
-const port = normalizePort(process.env.PORT || '3001')
+const port = normalizePort(process.env.PORT || 3001)
 
 app.set('port', port)
 

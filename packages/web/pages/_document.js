@@ -16,10 +16,10 @@ export default class MyDocument extends Document {
             content='initial-scale=1.0, width=device-width'
             key='viewport'
           />
-          <link
-            rel='stylesheet'
-            href='/_next/static/style.css'
-          />
+          {/*<link*/}
+            {/*rel='stylesheet'*/}
+            {/*href='/_next/static/style.css'*/}
+          {/*/>*/}
         </Head>
         <body>
           <Main />
